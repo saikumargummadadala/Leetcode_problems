@@ -1,4 +1,6 @@
 class Solution:
+    #checking if the 2d array is bigger than its nextnode if not it is removed from list then prints the lenght of list
+    
     def removeCoveredIntervals(self, intervals):
         intervals.sort(key=lambda x: (x[0], -x[1]))
         ans = []
