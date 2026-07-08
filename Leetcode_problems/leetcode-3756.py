@@ -1,6 +1,6 @@
 class Solution:
     def sumAndMultiply(self,str,queries):
-        MOD = 10**9 + 7
+        simplify = 10**9 + 7
         m = len(s)
         ans = [0] * len(queries)
         Sum = [0] * (m + 1)
@@ -9,7 +9,7 @@ class Solution:
         power = [1] * (m + 1)
 
         for i in range(1, m + 1):
-            power[i] = (power[i - 1] * 10) % MOD
+            power[i] = (power[i - 1] * 10) % simplify
 
         for i in range(m):
             digit = int(s[i])
@@ -18,16 +18,16 @@ class Solution:
             if digit == 0:
                 q[i + 1] = q[i]
             else:
-                q[i + 1] = (q[i] * 10 + digit) % MOD
+                q[i + 1] = (q[i] * 10 + digit) % simplify
 
         for n in range(len(queries)):
             l, r = queries[n]
             length = x[r + 1] - x[l]
             start = q[l]
             end = q[r + 1]
-            number = (end - (start * power[length]) % MOD + MOD) % MOD
+            number = (end - (start * power[length]) % simplify + simplify) % simplify
             total = Sum[r + 1] - Sum[l]
-            ans[n] = (number * total) % MOD
+            ans[n] = (number * total) % simplify
 
         return ans
 s = "10203004"
