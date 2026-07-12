@@ -9,5 +9,6 @@ class Solution:
         for i in range(len(arr)):
             arr[i] = bisect_left(unique, arr[i]) + 1
         return arr
-arr=[40,10,20,30,20]
+arr=list(map(int,input().split(",")))
+#arr=[40,10,20,30,20]
 print(Solution().arrayRankTransform(arr))
