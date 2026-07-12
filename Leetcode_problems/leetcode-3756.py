@@ -1,5 +1,5 @@
 class Solution:
-    def sumAndMultiply(self,str,queries):
+    def sumAndMultiply(self,s,queries):
         simplify = 10**9 + 7
         m = len(s)
         ans = [0] * len(queries)
