@@ -4,6 +4,7 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
+        #similar to leetcode -1081(identical)
         stack = []
         seen = set()
         last_occurrence = {char: i for i, char in enumerate(s)}
