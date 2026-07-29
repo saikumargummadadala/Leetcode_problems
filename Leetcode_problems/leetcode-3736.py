@@ -8,3 +8,6 @@ class Solution:
             else:
                 count+=b-i
         return count
+nums=list(map(int,input().split(",")))
+#nums=[2,1,3]
+print(Solution().minMoves(nums))
